@@ -46,11 +46,11 @@ def main():
 
     os.chdir(files_dir)
     cwd = Path(os.getcwd())
-#    print(cwd)
+    print(cwd)
     
-#    for uri in download_uris:
-#        with open(f"{uri.split('/')[-1]}", "wb") as f:
-#            f.write(requests.get(uri, allow_redirects=True).content)
+    for uri in download_uris:
+        with open(f"{uri.split('/')[-1]}", "wb") as f:
+            f.write(requests.get(uri, allow_redirects=True).content)
 
     for file in os.listdir(cwd):
         file_dir = cwd / file
