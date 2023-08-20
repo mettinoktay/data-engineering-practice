@@ -1,18 +1,18 @@
 ## Exercise 8 - Understanding and use DuckDB.
 
-In this exercise we are going to have some problems to solve that will require us to 
+In this exercise we are going to have some problems to solve that will require us to
 use various DuckDB functions and functionality. You can read through the documentation
 here https://duckdb.org/docs/
 
 #### Setup
-1. Change directories at the command line 
+1. Change directories at the command line
    to be inside the `Exercise-8` folder `cd Exercises/Exercise-8`
-   
+
 2. Run `docker build --tag=exercise-8 .` to build the `Docker` image.
 
 3. There is a file called `main.py` in the `Exercise-8` directory, this
 is where your `DuckDB` code to complete the exercise should go.
-   
+
 4. Once you have finished the project or want to test run your code,
    run the following command `docker-compose up run` from inside the `Exercises/Exercise-8` directory
 

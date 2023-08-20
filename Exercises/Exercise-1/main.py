@@ -1,4 +1,4 @@
-'''
+"""
 Generally, your script should do the following ...
 
 +create the directory downloads if it doesn't exist
@@ -6,8 +6,8 @@ Generally, your script should do the following ...
 +split out the filename from the uri, so the file keeps its original filename.
 +Each file is a zip, extract the csv from the zip and delete the zip file.
 
-For extra credit, download the files in an async manner using the Python package aiohttp. 
-Also try using ThreadPoolExecutor in Python to download the files. 
+For extra credit, download the files in an async manner using the Python package aiohttp.
+Also try using ThreadPoolExecutor in Python to download the files.
 Also write unit tests to improve your skills.
 
 Download URIs are listed in the main.py file.
@@ -15,7 +15,7 @@ Download URIs are listed in the main.py file.
 Hints
 Don't assume all the uri's are valid.
 One approach would be the Python method split() to retrieve filename for uri, or maybe find the last occurrence of / and take the rest of the string.
-'''
+"""
 
 import requests
 import os
@@ -36,10 +36,10 @@ download_uris = [
 
 def main():
     cwd = Path(os.getcwd())
-    #print(cwd)
-    files_dir = Path(f"{cwd}\downloads") # search keyword: f string
+    # print(cwd)
+    files_dir = Path(f"{cwd}\downloads")  # search keyword: f string
     try:
-        os.mkdir(files_dir) 
+        os.mkdir(files_dir)
         print(f"Folder {cwd}\downloads has been created.")
     except FileExistsError as e:
         print("Folder exists. Continuing...")
@@ -47,7 +47,7 @@ def main():
     os.chdir(files_dir)
     cwd = Path(os.getcwd())
     print(cwd)
-    
+
     for uri in download_uris:
         with open(f"{uri.split('/')[-1]}", "wb") as f:
             f.write(requests.get(uri, allow_redirects=True).content)
@@ -55,7 +55,7 @@ def main():
     for file in os.listdir(cwd):
         file_dir = cwd / file
         try:
-            with ZipFile(file_dir, 'r') as zObject:
+            with ZipFile(file_dir, "r") as zObject:
                 zObject.extractall(path=cwd)
                 print("File extracted.")
                 input("Waiting for user input")
