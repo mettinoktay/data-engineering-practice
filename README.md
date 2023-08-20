@@ -1,5 +1,7 @@
 ## Data Engineering Practice Problems
 
+*** This repo is live on [Bitbucket](bitbucket.org/dataengprac/data-engineering-practice) and [Github](https://github.com/mettinoktay/data-engineering-practice).
+
 One of the main obstacles of Data Engineering is the large
 and varied technical skills that can be required on a 
 day-to-day basis.
@@ -17,6 +19,7 @@ topics that these practice problems will cover.
 - Python + Postgres, data ingestion and retrieval.
 - PySpark
 - Data cleansing / dirty data.
+
 
 ### How to work on the problems.
 You will need two things to work effectively on most all
